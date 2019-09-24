@@ -1,0 +1,100 @@
+<section class="bookings">
+  <h1>RECEPTIONISTS</h1>
+  <div class="control-section">
+    <div class="buttons-section">
+      <a (click)="addReceptionist()">Add</a>
+      <a (click)="removeReceptionist()">Remove</a>
+      <a (click)="updateReceptionist()">Update</a>
+      <a (click)="toggleReceptionist()">View</a>
+    </div>
+    <div class="field-section">
+      <div>
+        <span>Username :</span>
+        <input [(ngModel)]="user.username" type="text" name="receptionist_username">
+      </div>
+      <div>
+        <span>Password :</span>
+        <input [(ngModel)]="user.password" type="password" name="teceptionist_password">
+      </div>
+      <div>
+        <span>Role :</span>
+        <input [(ngModel)]="user.role" type="text" name="receptionist_role">
+      </div>
+      <div>
+        <span>ID :</span>
+        <input [(ngModel)]="user.id" type="text" name="receptionist_id">
+      </div>
+    </div>
+  </div>
+  <div class="listings-section">
+    <div *ngIf="showReceptionist">
+      <ul *ngFor="let user of users" >
+        <li>UserID: {{user.id}} ----Username: {{user.username}} ---- Password: {{user.password}} ---- Role: {{user.role}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="bookings">
+  <h1>HOTELS</h1>
+  <div class="control-section">
+    <div class="buttons-section">
+      <a (click)="addHotel()">Add</a>
+      <a (click)="removeHotel()">Remove</a>
+      <a (click)="updateHotel()">Update</a>
+      <a (click)="toggleHotels()">View</a>
+    </div>
+    <div class="field-section">
+      <div>
+        <span>Name :</span>
+        <input [(ngModel)]="hotel.name" type="text" name="hotel_name">
+      </div>
+      <div>
+        <span>ID :</span>
+        <input [(ngModel)]="hotel.id" type="number" name="hotel_id">
+      </div>
+    </div>
+  </div>
+  <div class="listings-section">
+    <div *ngIf="showHotels">
+      <ul *ngFor="let hotel of hotels" >
+        <li>Hotel name: {{hotel.name}} ---- Hotel id: {{hotel.id}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="bookings">
+  <h1>ROOMS</h1>
+  <div class="control-section">
+    <div class="buttons-section">
+      <a (click)="addRoom()">Add</a>
+      <a (click)="removeRoom()">Remove</a>
+      <a (click)="updateRoom()">Update</a>
+      <a (click)="toggleRooms()">View</a>
+    </div>
+    <div class="field-section">
+      <div>
+        <span>Room No. :</span>
+        <input [(ngModel)]="room.id" type="number" name="room_number">
+      </div>
+      <div>
+        <span>Price :</span>
+        <input [(ngModel)]="room.cost"  type="number" name="room_price">
+      </div>
+      <div>
+        <span>Availability :</span>
+        <input [(ngModel)]="room.availability" type="text" name="room_availability">
+      </div>
+    </div>
+  </div>
+  <div class="listings-section">
+    <div *ngIf="showRooms">
+      <ul *ngFor="let room of rooms" >
+        <li>Room id: {{room.id}} ---- Room cost: {{room.cost}} ---- Room availability: {{room.availability}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<a class="total-earnings" (click)="getEarnings()">Total Earnings</a>
+

@@ -1,0 +1,40 @@
+<section class="bookings">
+  <h1>BOOKINGS</h1>
+  <div class="control-section">
+    <div class="buttons-section">
+      <a (click)="addBooking()"> Add </a>
+      <a (click)="removeBooking()">Remove</a>
+      <a (click)="updateBooking()">Update</a>
+      <a (click)="toggleBooking()">View</a>
+    </div>
+    <div class="field-section">
+      <div>
+        <span>Room No. :</span>
+        <input [(ngModel)]="booking.idRoom" type="number" name="roomnumber">
+      </div>
+      <div>
+        <span>Hotel No. :</span>
+        <input  [(ngModel)]="booking.idHotel" type="number" name="hotelnumber">
+      </div>
+      <div>
+        <span>Reservation No. :</span>
+        <input  [(ngModel)]="booking.id" type="number" name="reservationnumber">
+      </div>
+    </div>
+  </div>
+  <div class="listings-section">
+    <div *ngIf="showBookings">
+      <ul *ngFor="let booking of bookings" >
+        <li>Reservation id:{{booking.id}} ---- Room id:{{booking.idRoom}} ---- Hotel id:{{booking.idHotel}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="email">
+  <div>
+    <span>Email:</span>
+    <input [(ngModel)]="email.to" type="email" name="email">
+    <a (click)="sendMail()">Send email</a>
+  </div>
+</section>
+

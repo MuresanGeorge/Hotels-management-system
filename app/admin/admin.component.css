@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.bookings {
+  padding: 20px;
+  min-height: 250px;
+}
+.bookings h1 {
+  font-size: 18px;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+a {
+  background-color: red;
+  box-shadow: 0 5px 0 darkred;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  width: 120px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+a:hover {
+  background-color: #ce0606;
+}
+a:active {
+  box-shadow: none;
+  top: 5px;
+}
+.field-section, .buttons-section, .listings-section {
+  float: left;
+}
+.field-section, .listings-section {
+  margin-left: 15px;
+}
+.field-section div {
+  margin-bottom: 15px;
+}
+.listings-section ul {
+  margin: 0;
+}
+.email {
+  padding: 20px;
+}
+.email a {
+  margin-top: 20px;
+}
+.total-earnings {
+  width: 200px;
+  margin: 0 auto;
+}
